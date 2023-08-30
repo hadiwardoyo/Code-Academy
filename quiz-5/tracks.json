@@ -1,0 +1,32 @@
+{
+  "expense": {
+    "lists": [
+      {
+        "id": 1,
+        "name": "Bayar cicilan",
+        "subtotal": 1000000
+      },
+      {
+        "id": 2,
+        "name": "Beli makan",
+        "subtotal": 600000
+      }
+    ],
+    "total": 1600000
+  },
+  "income": {
+    "lists": [
+      {
+        "id": 1,
+        "name": "Jualan online",
+        "subtotal": 1000000
+      },
+      {
+        "id": 2,
+        "name": "Jual makan",
+        "subtotal": 400000
+      }
+    ],
+    "total": 1400000
+  }
+}
