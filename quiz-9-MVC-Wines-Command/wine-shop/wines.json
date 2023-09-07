@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Moscato 2010",
+    "year": 1223,
+    "type": "Red",
+    "createdAt": "2021-01-10"
+  },
+  {
+    "id": 3,
+    "name": "americano beer",
+    "year": 2000,
+    "type": "White",
+    "createdAt": "2023-09-06"
+  },
+  {
+    "id": 4,
+    "name": "plinser 19",
+    "year": 1022,
+    "type": "White",
+    "createdAt": "2023-09-06"
+  },
+  {
+    "id": 5,
+    "name": "mochaciato",
+    "year": 1880,
+    "type": "White",
+    "createdAt": "2023-09-06"
+  }
+]
