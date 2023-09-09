@@ -5,35 +5,33 @@ const turtle = require("./controllers/TurtleController");
 
 switch (command) {
   case "help":
-    turtle.help();
+    turtle.help(); //aman
     break;
   case "show":
-    turtle.show();
+    turtle.show(); // aman
     break;
   case "createBox":
-    turtle.createBox(params);
+    turtle.createBox(params); //aman
     break;
   case "add":
-    turtle.add(params);
+    turtle.add(params); //aman
     break;
   case "sell":
-    turtle.sell(params);
+    turtle.sellTurtle(params); //aman
     break;
   case "countPrice":
-    turtle.countPrice(params);
+    turtle.countPrice(params); //aman
     break;
   case "detail":
-    turtle.detail(params);
+    turtle.detailBox(params); //aman
     break;
   case "filter":
-    turtle.filter(params);
+    turtle.filter(params); //aman
     break;
   case undefined:
-    turtle.help();
+    turtle.help(); //aman
     break;
   default:
     turtle.message("Command not found, use help for more information");
     break;
 }
-
-// console.log(params[1]);

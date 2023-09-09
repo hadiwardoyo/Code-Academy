@@ -76,7 +76,7 @@ Berikut adalah _turtleboxes.json_ :
 
 ## Tasks
 
-### Task 1 : Create Classes
+### Task 1 : Create Classes //done
 
 a. Buatlah class `Turtle` sebagai class utama dengan attribute berikut:
 
@@ -95,7 +95,7 @@ b. Buatlah class child `SnappingTurtle`, `Tortoise`, `Terrapins` dengan attribut
 
 Buatlah class `TurtleBox` sebagai class utama utk CRUD, dengan method sebagai berikut:
 
-a. showBoxes()
+a. showBoxes() //done
 
     - Menampilkan boxes yang berisi kura-kura
 
@@ -107,7 +107,7 @@ a. showBoxes()
     */
     ```
 
-b. createBox(boxName)
+b. createBox(boxName) //done
 
     - Membuat turtle box baru
     - Tidak boleh membuat nama turtle box dengan nama yang sudah ada.
@@ -167,7 +167,7 @@ node index.js detail <box_name>
 node index.js filter <species>
 ```
 
-1. `node index.js help`
+1. `node index.js help` //done
 
 - Memunculkan command - command yang ada dalam aplikasi ini
 
@@ -184,7 +184,7 @@ node index.js detail <box_name>
 node index.js filter <species>
 ```
 
-2. `node index.js create <box_name>`
+2. `node index.js create <box_name>` //done
 
 - Membuat turtle box menggunakan method _createBox_
 
@@ -195,7 +195,7 @@ Result:
 "first pond" box has been created.
 ```
 
-3. `node index.js add <box_name> <...turtle>`
+3. `node index.js add <box_name> <...turtle>` //done
 
 - Menambahkan turtle ke dalam box berdasarkan nama nya
 - Urutan input turtle: name, species price, patterns, size, weight
@@ -210,7 +210,7 @@ Result:
 "Aligator Snapping Turtle" has been added to "first pond" box.
 ```
 
-4. `node index.js sell <>`
+4. `node index.js sell <>` //done
 
 - Menghapus turtle dari box berdasarkan id nya
 
@@ -224,7 +224,7 @@ Jika tidak ada id nya
 Turtle not found.
 ```
 
-5. `node index.js countPrice <box_name>`
+5. `node index.js countPrice <box_name>` //done
 
 - Menghitung total harga dari sebuah box berdasarkan nama
 
@@ -235,7 +235,7 @@ Result:
 "first pond" is worth of Rp. 500000
 ```
 
-6. `node index.js detail <b0x_name>`
+6. `node index.js detail <b0x_name>` //done
 
 - Menampilkan detail dari sebuah box
 
@@ -243,7 +243,7 @@ Result:
 
 ```
 
-7. `node index.js show `
+7. `node index.js show ` //done
 
 - Menampilkan semua box yang ada
 
@@ -251,7 +251,7 @@ Result:
 
 ```
 
-8. `node index.js filter <species>`
+8. `node index.js filter <species>` //done
 
 - Mengelompokkan turtle berdasarkan species
 

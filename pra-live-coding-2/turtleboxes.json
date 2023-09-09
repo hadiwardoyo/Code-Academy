@@ -7,19 +7,19 @@
         "id": 1,
         "name": "Common Snapping Turtle",
         "species": "SnappingTurtle",
-        "size": 10,
-        "weight": 500,
         "price": 3500000,
-        "patterns": ["brown", "blade"]
+        "patterns": ["brown", "blade"],
+        "size": 10,
+        "weight": 500
       },
       {
         "id": 2,
         "name": "Common Snapping Turtle",
         "species": "SnappingTurtle",
-        "size": 5,
-        "weight": 350,
         "price": 1500000,
-        "patterns": ["brown", "blade"]
+        "patterns": ["brown", "blade"],
+        "size": 5,
+        "weight": 350
       }
     ]
   },
@@ -31,19 +31,43 @@
         "id": 1,
         "name": "Sulcata",
         "species": "Tortoise",
-        "size": 5,
-        "weight": 750,
         "price": 1500000,
-        "patterns": ["brown"]
+        "patterns": ["brown"],
+        "size": 5,
+        "weight": 750
       },
       {
         "id": 2,
         "name": "Red Eyed Slider Turtle",
         "species": "Terrapins",
-        "size": 3,
-        "weight": 200,
         "price": 500000,
-        "patterns": ["red", "blade"]
+        "patterns": ["red", "blade"],
+        "size": 3,
+        "weight": 200
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "boxName": "First Pond",
+    "turtles": [
+      {
+        "id": 1,
+        "name": "son of hades",
+        "species": "terrapins",
+        "price": 130000,
+        "patterns": ["yellow", "green"],
+        "size": 6,
+        "weight": 60
+      },
+      {
+        "id": 2,
+        "name": "cikini",
+        "species": "SnappingTurtle",
+        "price": 750000,
+        "patterns": [],
+        "size": 11,
+        "weight": 32
       }
     ]
   }
