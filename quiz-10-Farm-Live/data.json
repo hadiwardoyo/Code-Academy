@@ -1,0 +1,55 @@
+[
+   {
+      "id": 1,
+      "name": "Green Field",
+      "livestocks": [
+         {
+            "id": 1,
+            "type": "chicken",
+            "eggs": 10
+         },
+         {
+            "id": 2,
+            "type": "cow",
+            "milks": 5
+         },
+         {
+            "id": 3,
+            "type": "sheep",
+            "wools": 3
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "name": "rose farm",
+      "livestocks": [
+         {
+            "id": 1,
+            "type": "chicken",
+            "eggs": 9
+         },
+         {
+            "id": 2,
+            "type": "cow",
+            "milks": 13
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "name": "sunny day",
+      "livestocks": [
+         {
+            "id": 1,
+            "type": "cow",
+            "milks": 19
+         },
+         {
+            "id": 2,
+            "type": "chicken",
+            "eggs": 15
+         }
+      ]
+   }
+]
