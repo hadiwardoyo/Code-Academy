@@ -5,32 +5,35 @@ const farm = require("./controllers/FarmController");
 
 switch (command) {
   case "help":
-    farm.help(); //aman
+    farm.help();
     break;
 
-  case "show": //aman
+  case "show":
     farm.show();
     break;
 
-  case "create": //aman
+  case "create":
     farm.createFarm(params);
     break;
 
-  case "details": //aman
+  case "details":
     farm.details(params);
     break;
 
-  case "add": //aman
+  case "add":
     farm.addLivestock(params);
     break;
 
   case "sell":
+    farm.sell(params);
     break;
 
   case "totalProduce":
+    farm.totalProduce(params);
     break;
 
   case "sort":
+    farm.sort(params);
     break;
 
   case undefined:

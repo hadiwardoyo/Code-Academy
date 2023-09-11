@@ -28,8 +28,22 @@ class FarmController {
     view.details(data, farmName);
   }
   static addLivestock(params) {
-    let data = Farm.addLivestock(params);
-    view.message(data);
+    let msg = Farm.addLivestock(params);
+    view.message(msg);
+  }
+  static sell(params) {
+    let msg = Farm.sell(params);
+    view.message(msg);
+  }
+
+  static totalProduce(params) {
+    let msg = Farm.totalProduce(params);
+    view.message(msg);
+  }
+
+  static sort(params) {
+    let data = Farm.sort(params);
+    view.sort(data, params);
   }
 }
 

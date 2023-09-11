@@ -9,7 +9,7 @@ class FarmView {
     console.log("farm add <farm_name> <livestock_type>");
     console.log("farm sell <farm_name> <livestock_id>");
     console.log("farm totalProduce <farm_name>");
-    console.log("farm sort <sort_type>");
+    console.log("farm sort <sort_type(produce/livestocks)>");
     console.log("================================\n");
   }
 
@@ -37,19 +37,49 @@ class FarmView {
       console.log(`${farmName} stats:`);
       console.log("================================");
       data[1][0].livestocks.forEach((element, index) => {
-        let { type, eggs, milks, wools } = element;
+        let { id, type, eggs, milks, wools } = element;
         if (type === "chicken") {
-          console.log(`${index + 1}. Chicken, egg: ${eggs}`);
+          console.log(`${id}. Chicken, egg: ${eggs}`);
         } else if (type === "cow") {
-          console.log(`${index + 1}. Cow, milks: ${milks}`);
+          console.log(`${id}. Cow, milks: ${milks}`);
         } else if (type === "sheep") {
-          console.log(`${index + 1}. Sheep, wools: ${wools}`);
+          console.log(`${id}. Sheep, wools: ${wools}`);
         }
       });
 
       console.log("================================\n");
     } else {
       this.message(data[1]);
+    }
+  }
+
+  static sort(data, type) {
+    type = type[0];
+    switch (type) {
+      case "produce":
+        console.log("================================");
+        data[0].forEach((element, index) => {
+          console.log(
+            `${index + 1}. "${element.name}": ${data[1][index]} produce`
+          );
+        });
+
+        break;
+      case "livestocks":
+        console.log("================================");
+        data[0].forEach((element, index) => {
+          console.log(
+            `${index + 1}. "${element.name}": ${
+              element.livestocks.length
+            } livestock`
+          );
+        });
+        break;
+      default:
+        console.log("================================");
+        console.log("Wrong Input");
+        console.log("================================");
+        break;
     }
   }
 }

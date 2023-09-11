@@ -135,6 +135,97 @@ class Farm {
     return `a ${type} has been add ${random}:${hasil} to ${farmName}`;
   }
 
+  static sell(params) {
+    let data = this.getFarm();
+    let farmName = params[0];
+    let idSell = +params[1];
+    let tmp = 0;
+    let type = "";
+    if (this.cekFarm(farmName, data)) {
+      return `${farmName} not found `;
+    }
+
+    data = data.map((element) => {
+      let { id, name, livestocks } = element;
+      if (name.toLowerCase() === farmName.toLowerCase()) {
+        livestocks = livestocks.map((x) => {
+          if (x.id === idSell) {
+            tmp++;
+            type = x.type;
+          }
+          return x;
+        });
+
+        livestocks = livestocks.filter((x) => x.id !== idSell);
+      }
+      return new Farm(id, name, livestocks);
+    });
+    this.save(data);
+    if (tmp > 0) {
+      return `${type} has been sold`;
+    } else {
+      return "Livestock not found";
+    }
+  }
+
+  static totalProduce(farmName) {
+    let data = this.getFarm();
+    farmName = farmName[0];
+    let count = 0;
+
+    if (this.cekFarm(farmName, data)) {
+      return `${farmName} not found `;
+    }
+
+    data = data.filter((x) => x.name.toLowerCase() === farmName.toLowerCase());
+
+    data[0].livestocks.forEach((x) => {
+      switch (x.type) {
+        case "chicken":
+          count += x.eggs;
+          break;
+        case "cow":
+          count += x.milks;
+          break;
+        case "sheep":
+          count += x.wools;
+          break;
+      }
+    });
+    // return `"${farmName}" has produced ${count} goods`;
+    return count;
+  }
+
+  static sort(typeSort) {
+    let data = this.getFarm();
+    typeSort = typeSort[0];
+    let tmp = [];
+
+    switch (typeSort) {
+      case "produce":
+        data = data.sort(
+          (a, b) => this.totalProduce([a.name]) - this.totalProduce([b.name])
+        );
+        break;
+      case "livestocks":
+        data = data.sort((a, b) => a.livestocks.length - b.livestocks.length);
+        break;
+    }
+
+    for (let i = 0; i < data.length; i++) {
+      tmp.push(this.totalProduce([data[i].name]));
+    }
+
+    return [data, tmp];
+  }
+
+  static cekFarm(farm, data) {
+    let tmp = data.findIndex(
+      (x) => x.name.toLowerCase() === farm.toLowerCase()
+    );
+    return tmp === -1;
+  }
+
   static save(data) {
     fs.writeFileSync("./data.json", JSON.stringify(data, null, 3));
   }
