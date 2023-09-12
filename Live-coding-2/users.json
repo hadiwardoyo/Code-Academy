@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": 123,
+    "role": "admin",
+    "loggedIn": false
+  },
+  {
+    "id": 2,
+    "username": "jake",
+    "password": 123,
+    "role": "sculpter",
+    "loggedIn": false
+  },
+  {
+    "id": 3,
+    "username": "jack",
+    "password": 123,
+    "role": "painter",
+    "loggedIn": false
+  },
+  {
+    "id": 4,
+    "username": "jane",
+    "password": 132,
+    "role": "carver",
+    "loggedIn": false
+  },
+  {
+    "id": 5,
+    "username": "jim",
+    "password": 123,
+    "role": "admin",
+    "loggedIn": false
+  },
+  {
+    "id": 6,
+    "username": "rahmat",
+    "password": 12345,
+    "role": "painter",
+    "loggedIn": true
+  }
+]

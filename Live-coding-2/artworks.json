@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Masterpiece v2",
+    "price": 17000000,
+    "type": "sculpture",
+    "artist": "jake"
+  },
+  {
+    "id": 2,
+    "name": "Ocean",
+    "price": 1000000,
+    "type": "painting",
+    "artist": "jack"
+  },
+  {
+    "id": 3,
+    "name": "Walking",
+    "price": 1000000,
+    "type": "carving",
+    "artist": "jane"
+  },
+  {
+    "id": 4,
+    "name": "Running",
+    "price": "14000000",
+    "type": "painting",
+    "artist": "rahmat"
+  }
+]
