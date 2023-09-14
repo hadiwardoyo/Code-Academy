@@ -1,0 +1,37 @@
+[
+   {
+      "id": 1,
+      "task": "Belajar Node.js",
+      "type": true,
+      "created_at": "2022-01-07T18:02:09.513Z",
+      "completed_at": "2022-01-07T18:02:09.513Z"
+   },
+   {
+      "id": 2,
+      "task": "Nonton Stream",
+      "type": false,
+      "created_at": "2023-09-05T15:41:46.127Z",
+      "completed_at": null
+   },
+   {
+      "id": 3,
+      "task": "Ngerjain Quiz",
+      "type": true,
+      "created_at": "2023-09-05T15:32:19.134Z",
+      "completed_at": "2023-09-14T16:15:46.237Z"
+   },
+   {
+      "id": 4,
+      "task": "nonton one piece",
+      "type": false,
+      "created_at": "2023-09-05T15:32:21.447Z",
+      "completed_at": null
+   },
+   {
+      "id": 5,
+      "task": "play game dota",
+      "type": true,
+      "created_at": "2023-09-14T16:07:31.805Z",
+      "completed_at": "2023-09-05T15:58:58.005Z"
+   }
+]
