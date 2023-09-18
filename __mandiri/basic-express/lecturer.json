@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Rahmat",
+    "matkul": "calculus",
+    "age": 24,
+    "city": "Malang"
+  },
+  {
+    "id": 2,
+    "name": "Agung",
+    "matkul": "Metnum",
+    "age": 26,
+    "city": "surabaya"
+  }
+]

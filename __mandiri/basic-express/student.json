@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "indah",
+    "major": "Biology",
+    "semester": 3,
+    "city": "Bandung"
+  },
+  {
+    "id": 2,
+    "name": "Fiony",
+    "major": "dkv",
+    "semester": 5,
+    "city": "Tanggerang"
+  }
+]

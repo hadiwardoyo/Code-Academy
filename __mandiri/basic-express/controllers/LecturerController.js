@@ -1,6 +1,15 @@
+const lecturer = require("../models/LecturerModel");
+
 class LecturerController {
   static getLecturer(req, res) {
-    res.send("lecturer page");
+    lecturer
+      .getAllLecturer()
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
   }
 
   static create(req, res) {
@@ -9,11 +18,14 @@ class LecturerController {
 
   static information(req, res) {
     const id = Number(req.params.id);
-    if (typeof id === "number" && isNaN(id) === false) {
-      res.send(`Information lecturer page id number : ${id}`);
-    } else {
-      res.send("ID lecturer must be number");
-    }
+    lecturer
+      .information(id)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
   }
 }
 
