@@ -1,19 +1,73 @@
+const student = require("../models/StudentModel");
+
 class StudentController {
   static getStudent(req, res) {
-    res.send("Student page");
+    student
+      .getAllStudent()
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
   }
 
   static create(req, res) {
-    res.send("Student create page");
+    student
+      .create(req.body)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+
+  static delete(req, res) {
+    let id = Number(req.params.id);
+    student
+      .delete(id)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+
+  static update(req, res) {
+    const id = Number(req.params.id);
+    // console.log(id);
+    student
+      .update(id, req.body)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
   }
 
   static information(req, res) {
     const id = Number(req.params.id);
-    if (typeof id === "number" && isNaN(id) === false) {
-      res.send(`Information Student page id number : ${id}`);
-    } else {
-      res.send("ID Student must be number");
-    }
+    student
+      .information(id)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+  static search(req, res) {
+    student
+      .search(req.query)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
   }
 }
 

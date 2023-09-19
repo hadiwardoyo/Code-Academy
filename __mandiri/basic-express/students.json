@@ -1,10 +1,10 @@
 [
    {
       "id": 1,
-      "name": "tantri",
-      "major": "biology",
+      "name": "indah",
+      "major": "Biology",
       "semester": 3,
-      "city": "semarang"
+      "city": "Bandung"
    },
    {
       "id": 2,
@@ -19,12 +19,5 @@
       "major": "chemistry",
       "semester": 7,
       "city": "sidoarjo"
-   },
-   {
-      "id": 4,
-      "name": "rizky",
-      "major": "mathmematic",
-      "semester": 3,
-      "city": "pasuruan"
    }
 ]
