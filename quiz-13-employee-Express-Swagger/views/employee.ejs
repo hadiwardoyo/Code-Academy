@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejs express</title>
+    <style>
+      table {
+        width: 500px;
+        margin-top: 6px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 4px 7px;
+        color: black;
+        background-color: cyan;
+        margin-bottom: auto;
+        border: 1px solid black;
+      }
+      a:hover {
+        background-color: whitesmoke;
+        color: blue;
+      }
+      a.information-user {
+        text-decoration: none;
+        color: wheat;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employees Page</h1>
+    <a href="/">Home</a>
+    <a href="/employee">Employees</a>
+    <a href="/job">Jobs</a>
+    <a href="/employer">Employer</a>
+    <!-- <button><a href="/lecturers">Lecturer</a></button> -->
+    <hr />
+    <p>
+      CODE.ID is a software development service company that focuses on helping
+      clients turn their best ideas into a product, application, or website. We
+      also provide IP Products, including Activo for Fixed Asset Management and
+      Klaim for Claim System Management.
+    </p>
+    <hr />
+    <a href="/employee/create">tambahkan employee</a>
+
+    <table border="1" cellspacing="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Job</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% employee.forEach(data =>{ %>
+        <tr>
+          <td>
+            <a
+              class="information-user"
+              href="/employee/information/<%=data.id%>"
+            >
+              <%= data.id %>
+            </a>
+          </td>
+          <td><%= data.name %></td>
+          <td><%= data.job %></td>
+          <td><%= data.age %></td>
+          <td><%= data.city %></td>
+          <td>
+            <a href="/employee/update/<%=data.id%>"">Edit</a>
+            <a href="/employee/delete/<%=data.id%>">Delete</a>
+          </td>
+        </tr>
+        <% })%>
+      </tbody>
+    </table>
+    <hr />
+  </body>
+</html>

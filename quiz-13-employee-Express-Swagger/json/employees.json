@@ -1,0 +1,37 @@
+[
+   {
+      "id": 1,
+      "name": "rahmat",
+      "job": "marketing",
+      "age": 23,
+      "city": "tokyo"
+   },
+   {
+      "id": 2,
+      "name": "agung",
+      "job": "IT support",
+      "age": 25,
+      "city": "malang"
+   },
+   {
+      "id": 3,
+      "name": "hadiwardoyo",
+      "job": "marketing",
+      "age": 23,
+      "city": "ngalam"
+   },
+   {
+      "id": 4,
+      "name": "rrose",
+      "job": "talent",
+      "age": 33,
+      "city": "jember"
+   },
+   {
+      "id": 5,
+      "name": "madara",
+      "job": "head manager",
+      "age": 45,
+      "city": "bandung"
+   }
+]

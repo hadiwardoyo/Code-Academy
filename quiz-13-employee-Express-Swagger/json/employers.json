@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "vincent",
+    "type": "manager it",
+    "total_employee": 12,
+    "city": "tangerang"
+  },
+  {
+    "id": 3,
+    "name": "citra kirana",
+    "type": "Head HR",
+    "total_employee": 50,
+    "city": "jakarta selatan"
+  },
+  {
+    "id": 3,
+    "name": "angga satria",
+    "type": "CTO ",
+    "total_employee": 121,
+    "city": "bekasi"
+  },
+  {
+    "id": 4,
+    "name": "rrose",
+    "type": "ceo",
+    "total_employee": 1222,
+    "city": "irian jaya"
+  }
+]

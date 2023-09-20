@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "name": "web administration",
+      "category": "PKWT",
+      "max_salary": 1000000,
+      "min_salary": 500000
+   },
+   {
+      "id": 2,
+      "name": "flutter developer",
+      "category": "intern ",
+      "max_salary": 7000000,
+      "min_salary": 4000000
+   },
+   {
+      "id": 3,
+      "name": "frontend developer",
+      "category": "magang ",
+      "max_salary": 3000000,
+      "min_salary": 1000000
+   },
+   {
+      "id": 4,
+      "name": "zoan",
+      "category": "pengawas",
+      "max_salary": 12000000,
+      "min_salary": 8000000
+   }
+]

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejs express</title>
+    <style>
+      table {
+        width: 500px;
+        margin-top: 6px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 4px 7px;
+        color: black;
+        background-color: cyan;
+        margin-bottom: auto;
+        border: 1px solid black;
+      }
+      a:hover {
+        background-color: mediumblue;
+      }
+      .form-main {
+        width: 600px;
+      }
+      .form-group {
+        width: 50px;
+        margin-bottom: 8px;
+      }
+      button {
+        background-color: darkgreen;
+        color: aliceblue;
+        padding: 4px 8px;
+      }
+
+      button:hover {
+        background-color: white;
+        outline: black;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jobs Edit Page</h1>
+    <a href="/">Home</a>
+    <a href="/job">Jobs</a>
+
+    <hr />
+    <p>
+      CODE.ID is a software development service company that focuses on helping
+      clients turn their best ideas into a product, application, or website. We
+      also provide IP Products, including Activo for Fixed Asset Management and
+      Klaim for Claim System Management.
+    </p>
+    <hr />
+
+    <div class="form-main">
+      <form action="/job/update/<%=job.id%>" method="post">
+        <b>ID : <%=job.id%></b> <br />
+        <div class="form-group">
+          <label for="">Name: </label>
+          <input type="text" name="name" value="<%=job.name%>" />
+        </div>
+        <div class="form-group">
+          <label for="">Category: </label>
+          <input type="text" name="category" value="<%=job.category%>" />
+        </div>
+        <div class="form-group">
+          <label for="">Max Salary: </label>
+          <input type="text" name="max_salary" value="<%=job.max_salary%>" />
+        </div>
+        <div class="form-group">
+          <label for="">Min Salary: </label>
+          <input type="text" name="min_salary" value="<%=job.min_salary%>" />
+        </div>
+        <div class="form-group">
+          <button type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+    <hr />
+  </body>
+</html>
