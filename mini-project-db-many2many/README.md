@@ -50,14 +50,15 @@
 
 ## -> DAFTAR ROUTING
 
-| method | route              | keterangan                                               | status pengerjaan |
-| ------ | ------------------ | -------------------------------------------------------- | ----------------- |
-| GET    | /                  | tampilan homepage                                        |
-| GET    | /mataKuliah        | tampilan seluruh data _mata kuliah_ dan _kelas_ yang ada |
-| GET    | /praktikan         | tampilan seluruh data _praktikan_ & _list kelas_         |
-| GET    | /mataKuliah/detail | tampilan _detail praktikan_ yang ada _di kelas_          |
-| ------ | -----------------  | ------------------------------------------------------   | ----------------- |
-| GET    | /mataKuliah/add    | menuju form menambahkan mataKuliah                       |
-| POST   | /mataKuliah/add    | menyimpan data hasil input `mataKuliah/add`              |
-| GET    | /praktikan/add     | menuju form menambahkan praktikan (coba input csv)       |
-| POST   | /praktikan/add     | menyimpan data hasil input `mataKuliah/add`              |
+| method | route              | keterangan                                                           | status pengerjaan |
+| ------ | ------------------ | -------------------------------------------------------------------- | ----------------- |
+| GET    | /                  | tampilan homepage                                                    |
+| GET    | /mataKuliah        | tampilan seluruh data _mata kuliah_ dan _kelas_ yang ada             |
+| GET    | /praktikan         | tampilan seluruh data _praktikan_ & _list kelas_                     |
+| GET    | /mataKuliah/detail | tampilan _detail praktikan_ yang ada _di kelas_                      |
+| ------ | -----------------  | ------------------------------------------------------               | ----------------- |
+| GET    | /mataKuliah/add    | menuju form menambahkan mataKuliah                                   |
+| POST   | /mataKuliah/add    | menyimpan data hasil input `mataKuliah/add`                          |
+| GET    | /praktikan/add     | menuju form menambahkan praktikan (coba input csv) + kelas praktikum |
+| POST   | /praktikan/add     | menyimpan data hasil input `mataKuliah/add`                          |
+| ------ | -----------------  | ------------------------------------------------------               | ----------------- |
