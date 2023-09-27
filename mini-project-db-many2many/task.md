@@ -9,7 +9,7 @@ a. 5W1H mengenai aplikasi kalian
 - who : praktikan / administrator lab
 - when : pra praktikum (input kelas)
 - where : ? seluruh laboratorium komputer
--
+- why : karena dibutuhkan sistem yang
 - how :
 
 b. ERD yang telah dibuat _pakai: https://dbdiagram.io/_
@@ -41,17 +41,17 @@ Requirement:
 - Dapat dibuat secara manual dalam README.md di github
 - Bisa menggunakan Swagger
 
-4. Upload to cloud with Heroku
+4. Upload to cloud with Heroku / vercel
 5. File ppt dengan format: BE-[nama_apps]-[nama]
 
 Sprint Planning:
 
 - Day 1:
-  - [ x ] Cari tema
-    • Analisis table / menemukan relasi
-    • Buat ERD
-    • Buat folder dan init apps
-    • Create dan migrate db
+  • [x] Cari tema :heavy_check_mark:
+  • Analisis table / menemukan relasi
+  • Buat ERD
+  • Buat folder dan init apps
+  • Create dan migrate db
 - Day 2:
   • App.js
   • Routes
@@ -62,3 +62,5 @@ Sprint Planning:
   • API Documentation (try swagger)
   • EJS
   • CSS Framework (optional)
+
+vercel
