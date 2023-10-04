@@ -7,6 +7,7 @@
 - mataPraktikum
 - praktikan
 - mataPraktikum
+- jurusan (diluar relasi)
 
 ---
 
@@ -18,7 +19,7 @@
 | nama              | VARCHAR  | NOT NULL    |
 | jurusan           | VARCHAR  | NOT NULL    |
 | tahun_akademik    | VARCHAR  | NOT NULL    |
-| semester_akademik | VARCHAR  | NOT NULL    |
+| semester_akademik | VARCHAR  | NOT NULL    | ganjil / genap          |
 | jumlah_peserta    | INT      | ALLOW NULL  | generate data praktikan |
 
 ---
@@ -56,7 +57,7 @@
 | ---------------- | -------- | ----------- | ----------------- |
 | id               | SERIAL   | PRIMARY KEY |
 | nama             | VARCHAR  | NOT NULL    |
-| fakultas         | INT      | NOT NULL    |
+| fakultas         | VARCHAR  | NOT NULL    |
 | tahun_didirikan  | INT      | NOT NULL    |
 | nomor_akreditasi | VARCHAR  | ALLOW NULL  |
 
@@ -64,38 +65,39 @@
 
 ## -> DAFTAR ROUTING
 
-| method | route                     | keterangan                                                           | status pengerjaan |
-| ------ | ------------------------- | -------------------------------------------------------------------- | ----------------- |
-| GET    | /                         | tampilan homepage                                                    |
-| GET    | /mataKuliah               | tampilan seluruh data _mata kuliah_ dan _kelas_ yang ada             |
-| GET    | /praktikan                | tampilan seluruh data _praktikan_ & _list kelas_                     |
-| GET    | /mataKuliah/detail        | tampilan _detail mataKuliah_ yang ada _di kelas_                     |
-| ------ | -----------------         | ------------------------------------------------------               | ----------------- |
-| GET    | /mataKuliah/add           | menuju form menambahkan mataKuliah                                   |
-| POST   | /mataKuliah/add           | menyimpan data hasil input `mataKuliah/add`                          |
-| GET    | /praktikan/add            | menuju form menambahkan praktikan (coba input csv) + kelas praktikum |
-| POST   | /praktikan/add            | menyimpan data hasil input `mataKuliah/add`                          |
-| GET    | /mataPraktikum/add        | menambahkan kelas praktikum berdasarkan _mataKuliah_ dan             |
-| ------ | -----------------         | ------------------------------------------------------               | ----------------- |
-| GET    | /mataKuliah/delete/:id    | menghapus 1 mata kuliah beserta _seluruh kelasPraktikum_             |
-| GET    | /praktikan/delete/:id     | menghapus 1 praktikan dan menghapusnya di _kelas yang ada_           |
-| GET    | /mataPraktikum/delete/:id | menghapus kelas praktikum (_menghapus koneksi_)                      |                   |
-| ------ | -----------------         | ------------------------------------------------------               | ----------------- |
-| GET    | /mataKuliah/update/:id    | menampilkan halaman edit data _mataKuliah_ berdasarkan id            |
-| POST   | /mataKuliah/update/:id    | mengubah data _mataKuliah_ berdasarkan id                            |
-| GET    | /praktikan/update/:id     | menampilkan halaman edit data _praktikan_ berdasarkan id             |
-| POST   | /praktikan/update/:id     | mengubah data _praktikan dan kelas_ berdasarkan id _praktikan_       |
-| GET    | /mataPraktikum/update/:id | menampilkan halaman edit data _keanggotaan di kelas_, berdasarkan id |
-| POST   | /praktikan/update/:id     | mengubah data _praktikan_ berdasarkan id _praktikan_                 |
-| ------ | -----------------         | ------------------------------------------------------               | ----------------- |
+| method | route                                        | keterangan                                                                   | status pengerjaan |
+| ------ | -------------------------------------------- | ---------------------------------------------------------------------------- | ----------------- |
+| GET    | /                                            | tampilan homepage tidak memuat data apapun                                   | done              |
+| GET    | /mataKuliah                                  | menampilkan halaman berisi detail _mata kuliah_                              | done              |
+| GET    | /mataKuliah/data                             | mendapatkan seluruh data _mata kuliah_ yang ada                              | done              |
+| GET    | /praktikan                                   | menampilkan halaman berisi detail*praktikan*                                 | done              |
+| GET    | /praktikan/data                              | mendapatkan seluruh data _praktikan_ yang ada                                | done              |
+| GET    | /mataPraktikum/data                          | mendapatkan seluruh data _kelas praktikum_ yang ada                          | done              |
+| ------ | -----------------                            | ------------------------------------------------------                       | ----------------- |
+| GET    | /mataKuliah/add                              | menuju form menambahkan mataKuliah                                           | done              |
+| POST   | /mataKuliah/add                              | menyimpan data hasil input `mataKuliah/add`                                  | done              |
+| GET    | /praktikan/add                               | menuju form menambahkan _praktikan_                                          | done              |
+| POST   | /praktikan/add                               | menyimpan data hasil input `praktikan/add`                                   | done              |
+| GET    | /mataPraktikum/add                           | menambahkan kelas praktikum berdasarkan data _mataKuliah_ dan _praktikan id_ |
+| ------ | -----------------                            | ------------------------------------------------------                       | ----------------- |
+| GET    | /mataKuliah/delete/:id                       | menghapus 1 mata kuliah beserta _seluruh kelasPraktikum_                     | done              |
+| GET    | /praktikan/delete/:id                        | menghapus 1 praktikan dan menghapusnya di _kelas yang ada_                   | done              |
+| GET    | /mataPraktikum/delete/:idMatkul/:idPraktikan | menghapus kelas praktikum (_menghapus koneksi_)                              | -tampilan         |
+| ------ | -----------------                            | ------------------------------------------------------                       | ----------------- |
+| GET    | /mataKuliah/update/:id                       | menampilkan halaman edit data _mataKuliah_ berdasarkan id                    | done              |
+| POST   | /mataKuliah/update/:id                       | mengubah data _mataKuliah_ berdasarkan id                                    | done              |
+| GET    | /praktikan/update/:id                        | menampilkan halaman edit data _praktikan_ berdasarkan id                     | done              |
+| POST   | /praktikan/update/:id                        | mengubah data _praktikan_ berdasarkan id _praktikan_                         | done              |
+| ------ | -----------------                            | ------------------------------------------------------                       | ----------------- |
+| get    | /praktikan/:id/matkul                        | menampilkan halaman detail praktikan beserta _kelas praktikum_ yang ditempuh | done              |
 
 ## -> ROUTING TAMBAHAN (optional)
 
 | method | route               | keterangan                                             | status pengerjaan |
 | ------ | ------------------- | ------------------------------------------------------ | ----------------- |
-| GET    | /jurusan            | mendapatkan _data jurusan lengkap_                     |
-| GET    | /jurusan/add        | menuju form menambahkan jurusan                        |
-| POST   | /jurusan/add        | menyimpan data hasil input `jurusan/add`               |
-| GET    | /jurusan/delete/:id | menghapus 1 jurusan sesuai _id_                        |
-| GET    | /jurusan/update/:id | menampilkan halaman edit data _jurusan_ berdasarkan id |
-| POST   | /jurusan/update/:id | mengubah data _jurusan_ berdasarkan id                 |
+| GET    | /jurusan            | mendapatkan _data jurusan lengkap_                     | done              |
+| GET    | /jurusan/add        | menuju form menambahkan jurusan                        | -                 |
+| POST   | /jurusan/add        | menyimpan data hasil input `jurusan/add`               | done              |
+| GET    | /jurusan/delete/:id | menghapus 1 jurusan sesuai _id_                        | done              |
+| GET    | /jurusan/update/:id | menampilkan halaman edit data _jurusan_ berdasarkan id | -                 |
+| POST   | /jurusan/update/:id | mengubah data _jurusan_ berdasarkan id                 | done              |

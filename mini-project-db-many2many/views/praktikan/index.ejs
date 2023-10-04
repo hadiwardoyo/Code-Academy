@@ -1,0 +1,70 @@
+<%- include('../header') %>
+<div class="container my-3">
+  <a href="/praktikan/add" class="btn btn-success">Tambah Praktikan</a>
+  <div class="row bg-body text-center">
+    <div class="col-12">
+      <p>data of praktikan</p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="bg-primary bg-opacity-25">id</th>
+            <th class="bg-primary bg-opacity-25">nim</th>
+            <th class="bg-primary bg-opacity-25">nama</th>
+            <th class="bg-primary bg-opacity-25">jurusan</th>
+            <th class="bg-primary bg-opacity-25">fakultas</th>
+            <th class="bg-primary bg-opacity-25">tahun masuk</th>
+
+            <th class="bg-primary bg-opacity-25">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% praktikan.forEach(praktikans => { %>
+          <tr>
+            <td><%= praktikans.id %></td>
+            <td><%= praktikans.nim %></td>
+            <td>
+              <div class="row">
+                <div class="col-9">
+                  <h5><%= praktikans.nama %></h5>
+                  <small class="badge bg-primary">
+                    <%= praktikans.status %>
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td><%= praktikans.jurusan %></td>
+            <td><%= praktikans.fakultas %></td>
+            <td><%= praktikans.tahun_masuk %></td>
+
+            <td>
+              <a
+                type="button "
+                href="/praktikan/update/<%= praktikans.id %>"
+                class="btn btn-info btn-sm"
+              >
+                Edit
+              </a>
+              <a
+                type="button"
+                href="/praktikan/delete/<%= praktikans.id %>"
+                class="btn btn-danger btn-sm"
+              >
+                Delete
+              </a>
+              <a
+                type="button"
+                href="/praktikan/<%= praktikans.id %>/matkul"
+                class="btn btn-warning btn-sm"
+              >
+                Detail
+              </a>
+            </td>
+          </tr>
+
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('../footer') %>

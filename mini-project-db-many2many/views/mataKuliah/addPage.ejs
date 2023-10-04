@@ -1,0 +1,28 @@
+<%- include('../header') %>
+<div class="container my-3">
+  <div class="row">
+    <h3>Add Page Mata Kuliah</h3>
+    <div class="col-6 mx-auto">
+      <form method="post" action="/mataKuliah/add">
+        <div class="mb-3">
+          <label for="">nama</label>
+          <input type="text" class="form-control" name="nama" />
+        </div>
+        <div class="mb-3">
+          <label for="">jurusan</label>
+          <select class="form-control" name="jurusan">
+            <% jurusan.forEach(jurusans => { %>
+            <option value="<%= jurusans.nama %>"><%= jurusans.nama %></option>
+            <%})%>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <button class="btn btn-success" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('../footer') %>

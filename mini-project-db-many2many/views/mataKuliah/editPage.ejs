@@ -1,0 +1,64 @@
+<%- include('../header') %>
+<div class="container my-3">
+  <h3>praktikan edit page</h3>
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <form method="post" action="/mataKuliah/update/<%= mataKuliah.id %>">
+        <div class="mb-3">
+          <label for="">nama</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nama"
+            value="<%= mataKuliah.nama %>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="">tahun akademik</label>
+          <input
+            type="text"
+            class="form-control"
+            name="tahun_akademik"
+            value="<%= mataKuliah.tahun_akademik %>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="" class="text-center">semester akademik</label>
+          <input
+            type="text"
+            class="form-control"
+            name="semester_akademik"
+            value="<%= mataKuliah.semester_akademik %>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="">jurusan</label>
+          <select
+            class="form-control"
+            name="jurusan"
+            value="<%= mataKuliah.jurusan %>"
+          >
+            <% jurusan.forEach(jurusans => { %>
+            <option value="<%= jurusans.nama %>"><%= jurusans.nama %></option>
+            <%})%>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="">jumlah peserta</label>
+          <input
+            type="text"
+            class="form-control"
+            name="jumlah_peserta"
+            value="<%= mataKuliah.jumlah_peserta || 0  %>"
+          />
+        </div>
+
+        <div class="mb-3">
+          <button class="btn btn-success" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('../footer') %>

@@ -1,0 +1,63 @@
+<%- include('../header') %>
+<div class="container my-3">
+  <a href="#" class="btn btn-success">Tambah Mata Praktikum</a>
+  <p class="text-center">data of mata pratkrikum</p>
+  <div class="row bg-body text-left">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="bg-primary bg-opacity-25">Mata Kuliah</th>
+            <th class="bg-primary bg-opacity-25">Nama Praktikan</th>
+            <th class="bg-primary bg-opacity-25">kelas</th>
+            <th class="bg-primary bg-opacity-25">hari</th>
+            <th class="bg-primary bg-opacity-25">pukul</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% mataPraktikums.forEach(matprak => { %>
+          <tr>
+            <td><%= matprak.mataKuliah.nama %></td>
+            <td><%= matprak.praktikan.nama %></td>
+            <td><%= matprak.kelas %></td>
+            <td>
+              <div class="row">
+                <div class="col-9">
+                  <h5><%= matprak.hari %></h5>
+                  <small class="badge bg-primary"> <%= matprak.pukul %> </small>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <a
+                type="button "
+                href="/mataPraktikum/update/<%= matprak.id %>"
+                class="btn btn-info btn-sm"
+              >
+                Edit
+              </a>
+              <a
+                type="button"
+                href="/mataPraktikum/delete/<%= matprak.mataKuliah.id %>/<%= matprak.praktikan.id %>"
+                class="btn btn-danger btn-sm"
+              >
+                Delete
+              </a>
+              <!-- <a
+                type="button"
+                href="/mataPraktikum/#/<%= matprak.id %>"
+                class="btn btn-warning btn-sm"
+              >
+                Detail
+              </a> -->
+            </td>
+          </tr>
+
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('../footer') %>

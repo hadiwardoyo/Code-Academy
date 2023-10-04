@@ -1,0 +1,61 @@
+<%- include('../header') %>
+<div class="container my-3">
+  <div class="row">
+    <h3>Halaman Menambahkan Kelas Praktikum</h3>
+    <div class="col-6 mx-auto">
+      <form method="post" action="/mataPraktikum/add">
+        <div class="mb-3">
+          <label for="">ID</label>
+          <input
+            name="praktikan_id"
+            value="<%= idPraktikan %>"
+            class="form-control"
+            type="text"
+            placeholder="<%= idPraktikan %>"
+            aria-label="Disabled input example"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="">Mata Kuliah</label>
+          <select class="form-control" name="mataKuliah_id">
+            <% mataKuliah.forEach(matkul => { %>
+            <option value="<%= matkul.id %>"><%= matkul.nama %></option>
+            <%})%>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="">Kelas</label>
+          <select class="form-control" name="kelas">
+            <% kelas.forEach(element => { %>
+            <option value="<%= element %>"><%= element %></option>
+            <%})%>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="">Hari</label>
+          <select class="form-control" name="hari">
+            <% hari.forEach(element => { %>
+            <option value="<%= element %>"><%= element %></option>
+            <%})%>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="">Pukul</label>
+          <select class="form-control" name="pukul">
+            <option value="07.00-9.00">07.00-9.00</option>
+            <option value="09.00-11.00">09.00-11.00</option>
+            <option value="11.00-13.00">11.00-13.00</option>
+            <option value="13.00-15.00">13.00-15.00</option>
+            <option value="15.00-17.00">15.00-17.00</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <button class="btn btn-success" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('../footer') %>

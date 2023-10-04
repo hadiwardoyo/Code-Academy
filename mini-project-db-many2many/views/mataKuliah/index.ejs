@@ -1,0 +1,67 @@
+<%- include('../header') %>
+<div class="container my-3">
+  <a href="/mataKuliah/add" class="btn btn-success">Tambah Mata Kuliah</a>
+  <p class="text-center">data of mata kuliah</p>
+  <div class="row bg-body text-left">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="bg-primary bg-opacity-25">ID</th>
+            <th class="bg-primary bg-opacity-25">Nama</th>
+            <th class="bg-primary bg-opacity-25">Jurusan</th>
+            <th class="bg-primary bg-opacity-25">Jumlah Peserta</th>
+            <th class="bg-primary bg-opacity-25">Tahun Semester Akademik</th>
+            <th class="bg-primary bg-opacity-25">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% mataKuliah.forEach(matkul => { %>
+          <tr>
+            <td><%= matkul.id %></td>
+            <td><%= matkul.nama %></td>
+            <td><%= matkul.jurusan %></td>
+            <td><%= matkul.jumlah_peserta %></td>
+            <td>
+              <div class="row">
+                <div class="col-9">
+                  <h5><%= matkul.tahun_akademik %></h5>
+                  <small class="badge bg-info">
+                    <%= matkul.semester_akademik %>
+                  </small>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <a
+                type="button "
+                href="/mataKuliah/update/<%= matkul.id %>"
+                class="btn btn-info btn-sm"
+              >
+                Edit
+              </a>
+              <a
+                type="button"
+                href="/mataKuliah/delete/<%= matkul.id %>"
+                class="btn btn-danger btn-sm"
+              >
+                Delete
+              </a>
+              <!-- <a
+                type="button"
+                href="/mataKuliah/#/<%= matkul.id %>"
+                class="btn btn-warning btn-sm"
+              >
+                Detail
+              </a> -->
+            </td>
+          </tr>
+
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('../footer') %>

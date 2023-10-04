@@ -9,13 +9,13 @@ a. 5W1H mengenai aplikasi kalian
 - who : praktikan / administrator lab
 - when : pra praktikum (input kelas)
 - where : ? seluruh laboratorium komputer
-- why : karena dibutuhkan sistem yang
+- why : karena dibutuhkan sistem untuk mengorganisir data peserta praktikum
 - how :
 
 b. ERD yang telah dibuat _pakai: https://dbdiagram.io/_
 c. Technology Stack yang digunakan _(sesuai point 1 requirement)_
 d. Endpoint yang diperlukan / API Document _(sesuai readme.md_)
-e. Demo apps ( coba seluruh toute)
+e. Demo apps ( coba seluruh route)
 
 Requirement:
 
@@ -47,20 +47,20 @@ Requirement:
 Sprint Planning:
 
 - Day 1:
-  • [x] Cari tema :heavy_check_mark:
-  • Analisis table / menemukan relasi
-  • Buat ERD
-  • Buat folder dan init apps
-  • Create dan migrate db
+  • [x] Cari tema
+  • [X] Analisis table / menemukan relasi
+  • [X] Buat ERD
+  • [X] Buat folder dan init apps
+  • [X] Create dan migrate db
 - Day 2:
-  • App.js
-  • Routes
-  • Controller
-  • Testing di postman
-  • Dst
+  • [X] App.js
+  • [X] Routes
+  • [X] Controller
+  • [X] Testing di postman
+  • [X] Dst
 - Day 3:
-  • API Documentation (try swagger)
-  • EJS
-  • CSS Framework (optional)
+  • [-] API Documentation (try swagger)
+  • [X] EJS
+  • [X] CSS Framework (optional) bootstraps standart
 
 vercel
